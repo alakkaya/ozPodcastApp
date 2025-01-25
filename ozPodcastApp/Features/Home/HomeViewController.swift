@@ -23,5 +23,10 @@ final class HomeViewController: UIViewController, NavigationView {
 }
 
 extension HomeViewController: PresenterToViewHomeProtocol{
+    func showMessage(message: String) {
+        let alert = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
+        alert.show(self, sender: nil)
+    }
+    
     // TODO: Implement View Output Methods
 }

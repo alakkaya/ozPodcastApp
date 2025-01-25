@@ -1,15 +1,6 @@
-//
-//  HomePresenter.swift
-//  ozPodcastApp
-//
-//  Created by Ali Akkaya on 18.01.2025.
-//  
-//
-
 import Foundation
 
 final class HomePresenter: ViewToPresenterHomeProtocol {
-
     // MARK: Properties
     private let view: PresenterToViewHomeProtocol
     private let interactor: PresenterToInteractorHomeProtocol
@@ -21,8 +12,16 @@ final class HomePresenter: ViewToPresenterHomeProtocol {
         self.router = router
         self.view = view
     }
+    
+    func onLikePressed(index: Int) {
+        // navigation mu interactor(db'ye save) mu yapıcam.
+    }
 }
 
-extension HomePresenter: InteractorToPresenterHomeProtocol {
+extension HomePresenter: InteractorToPresenterHomeProtocol { //output olduğu için buraya gekdi
+    func showSuccessMessage() {
+        view.showMessage(message: "Succesful!")
+    }
+    
     
 }

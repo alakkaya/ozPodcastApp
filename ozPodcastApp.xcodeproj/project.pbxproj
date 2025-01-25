@@ -6,15 +6,36 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4105ED662D3B994300279F29 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4105ED652D3B994300279F29 /* Alamofire */; };
+		4105ED6B2D3B99C300279F29 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4105ED6A2D3B99C300279F29 /* Swinject */; };
+		4105ED702D3B99F600279F29 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4105ED6F2D3B99F600279F29 /* Kingfisher */; };
+		4105ED742D3BA22E00279F29 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4105ED732D3BA22E00279F29 /* Realm */; };
+		4105ED792D3BA2F600279F29 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 4105ED782D3BA2F600279F29 /* Toast */; };
+		4105ED7D2D3BA82D00279F29 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 4105ED7C2D3BA82D00279F29 /* BottomSheet */; };
+		41ED91852D3BC1A8002FB93F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41ED91842D3BC1A8002FB93F /* SnapKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41FB58762D44F85100BC8E72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4105ED422D3B954100279F29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4105ED492D3B954100279F29;
+			remoteInfo = ozPodcastApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4105ED4A2D3B954100279F29 /* ozPodcastApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ozPodcastApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FB58722D44F85100BC8E72 /* ozPodcastAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ozPodcastAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		4105ED5C2D3B954200279F29 /* Exceptions for "ozPodcastApp" folder in "ozPodcastApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Application/Info.plist,
 			);
 			target = 4105ED492D3B954100279F29 /* ozPodcastApp */;
 		};
@@ -29,10 +50,29 @@
 			path = ozPodcastApp;
 			sourceTree = "<group>";
 		};
+		41FB58732D44F85100BC8E72 /* ozPodcastAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ozPodcastAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4105ED472D3B954100279F29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4105ED702D3B99F600279F29 /* Kingfisher in Frameworks */,
+				4105ED7D2D3BA82D00279F29 /* BottomSheet in Frameworks */,
+				4105ED662D3B994300279F29 /* Alamofire in Frameworks */,
+				41ED91852D3BC1A8002FB93F /* SnapKit in Frameworks */,
+				4105ED742D3BA22E00279F29 /* Realm in Frameworks */,
+				4105ED792D3BA2F600279F29 /* Toast in Frameworks */,
+				4105ED6B2D3B99C300279F29 /* Swinject in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41FB586F2D44F85100BC8E72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4105ED4C2D3B954100279F29 /* ozPodcastApp */,
+				41FB58732D44F85100BC8E72 /* ozPodcastAppTests */,
 				4105ED4B2D3B954100279F29 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4105ED4A2D3B954100279F29 /* ozPodcastApp.app */,
+				41FB58722D44F85100BC8E72 /* ozPodcastAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +110,7 @@
 				4105ED462D3B954100279F29 /* Sources */,
 				4105ED472D3B954100279F29 /* Frameworks */,
 				4105ED482D3B954100279F29 /* Resources */,
+				4105ED7A2D3BA40A00279F29 /* Swifftlint */,
 			);
 			buildRules = (
 			);
@@ -78,10 +121,40 @@
 			);
 			name = ozPodcastApp;
 			packageProductDependencies = (
+				4105ED652D3B994300279F29 /* Alamofire */,
+				4105ED6A2D3B99C300279F29 /* Swinject */,
+				4105ED6F2D3B99F600279F29 /* Kingfisher */,
+				4105ED732D3BA22E00279F29 /* Realm */,
+				4105ED782D3BA2F600279F29 /* Toast */,
+				4105ED7C2D3BA82D00279F29 /* BottomSheet */,
+				41ED91842D3BC1A8002FB93F /* SnapKit */,
 			);
 			productName = ozPodcastApp;
 			productReference = 4105ED4A2D3B954100279F29 /* ozPodcastApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		41FB58712D44F85100BC8E72 /* ozPodcastAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41FB58782D44F85100BC8E72 /* Build configuration list for PBXNativeTarget "ozPodcastAppTests" */;
+			buildPhases = (
+				41FB586E2D44F85100BC8E72 /* Sources */,
+				41FB586F2D44F85100BC8E72 /* Frameworks */,
+				41FB58702D44F85100BC8E72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41FB58772D44F85100BC8E72 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				41FB58732D44F85100BC8E72 /* ozPodcastAppTests */,
+			);
+			name = ozPodcastAppTests;
+			packageProductDependencies = (
+			);
+			productName = ozPodcastAppTests;
+			productReference = 41FB58722D44F85100BC8E72 /* ozPodcastAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +169,10 @@
 					4105ED492D3B954100279F29 = {
 						CreatedOnToolsVersion = 16.2;
 					};
+					41FB58712D44F85100BC8E72 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4105ED492D3B954100279F29;
+					};
 				};
 			};
 			buildConfigurationList = 4105ED452D3B954100279F29 /* Build configuration list for PBXProject "ozPodcastApp" */;
@@ -107,12 +184,23 @@
 			);
 			mainGroup = 4105ED412D3B954100279F29;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4105ED642D3B994200279F29 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4105ED692D3B99C300279F29 /* XCRemoteSwiftPackageReference "Swinject" */,
+				4105ED6E2D3B99F600279F29 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				4105ED722D3BA22E00279F29 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				4105ED772D3BA2F600279F29 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				4105ED7B2D3BA82D00279F29 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				41ED914D2D3BB38C002FB93F /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				41ED91832D3BC1A8002FB93F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4105ED4B2D3B954100279F29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4105ED492D3B954100279F29 /* ozPodcastApp */,
+				41FB58712D44F85100BC8E72 /* ozPodcastAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -125,7 +213,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41FB58702D44F85100BC8E72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4105ED7A2D3BA40A00279F29 /* Swifftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swifftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SWIFT_PACKAGE_DIR=\"${BUILD_DIR%Build/*}SourcePackages/artifacts\"\nSWIFTLINT_CMD=$(ls \"$SWIFT_PACKAGE_DIR\"/swiftlintplugins/SwiftLintBinary/SwiftLintBinary.artifactbundle/swiftlint-*-macos/bin/swiftlint | head -n 1)\n\nif test -f \"$SWIFTLINT_CMD\" 2>&1\nthen\n    \"$SWIFTLINT_CMD\"\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4105ED462D3B954100279F29 /* Sources */ = {
@@ -135,7 +251,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41FB586E2D44F85100BC8E72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41FB58772D44F85100BC8E72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4105ED492D3B954100279F29 /* ozPodcastApp */;
+			targetProxy = 41FB58762D44F85100BC8E72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4105ED5E2D3B954200279F29 /* Debug */ = {
@@ -145,11 +276,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ozPodcastApp/Info.plist;
+				INFOPLIST_FILE = ozPodcastApp/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -172,11 +303,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ozPodcastApp/Info.plist;
+				INFOPLIST_FILE = ozPodcastApp/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +442,40 @@
 			};
 			name = Release;
 		};
+		41FB58792D44F85100BC8E72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.ozPodcastAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ozPodcastApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ozPodcastApp";
+			};
+			name = Debug;
+		};
+		41FB587A2D44F85100BC8E72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.ozPodcastAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ozPodcastApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ozPodcastApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,7 +497,121 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		41FB58782D44F85100BC8E72 /* Build configuration list for PBXNativeTarget "ozPodcastAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41FB58792D44F85100BC8E72 /* Debug */,
+				41FB587A2D44F85100BC8E72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4105ED642D3B994200279F29 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		4105ED692D3B99C300279F29 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		4105ED6E2D3B99F600279F29 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.3;
+			};
+		};
+		4105ED722D3BA22E00279F29 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4105ED772D3BA2F600279F29 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		4105ED7B2D3BA82D00279F29 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joomcode/BottomSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.5;
+			};
+		};
+		41ED914D2D3BB38C002FB93F /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.58.2;
+			};
+		};
+		41ED91832D3BC1A8002FB93F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4105ED652D3B994300279F29 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4105ED642D3B994200279F29 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		4105ED6A2D3B99C300279F29 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4105ED692D3B99C300279F29 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		4105ED6F2D3B99F600279F29 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4105ED6E2D3B99F600279F29 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		4105ED732D3BA22E00279F29 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4105ED722D3BA22E00279F29 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		4105ED782D3BA2F600279F29 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4105ED772D3BA2F600279F29 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		4105ED7C2D3BA82D00279F29 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4105ED7B2D3BA82D00279F29 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+		41ED91842D3BC1A8002FB93F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41ED91832D3BC1A8002FB93F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4105ED422D3B954100279F29 /* Project object */;
 }

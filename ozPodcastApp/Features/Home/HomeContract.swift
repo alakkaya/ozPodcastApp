@@ -1,22 +1,15 @@
-//
-//  HomeContract.swift
-//  ozPodcastApp
-//
-//  Created by Ali Akkaya on 18.01.2025.
-//  
-//
-
 import Foundation
 
 
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewHomeProtocol {
-   
+    func showMessage(message: String) 
 }
 
 
 // MARK: View Input (View -> Presenter)
 protocol ViewToPresenterHomeProtocol {
+    func onLikePressed(index: Int )
 }
 
 
@@ -24,16 +17,18 @@ protocol ViewToPresenterHomeProtocol {
 protocol PresenterToInteractorHomeProtocol {
     
     var presenter: InteractorToPresenterHomeProtocol? { get set }
+    
+    func saveLikeIndexToDatabase(index: Int)
 }
 
 
-// MARK: Interactor Output (Interactor -> Presenter)
+// MARK: Interactor Output (Interactor -> Presenter) --dışarıya bilgi verceğiz
 protocol InteractorToPresenterHomeProtocol {
-    
+    func showSuccessMessage()
 }
 
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterHomeProtocol {
-    
+    func navigateToDetail()
 }

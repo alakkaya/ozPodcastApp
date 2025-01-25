@@ -5,31 +5,39 @@
 //  Created by Ali Akkaya on 25.01.2025.
 //
 
+import Foundation
 import XCTest
 
-final class NetworkManagerDemoTest: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+@testable import ozPodcastApp
+final class NetworkManagerDemoTests: XCTestCase {
+    
+    var networkManager: NetworkManager!
+    
+    override func setUp() {
+        networkManager = NetworkManager(config: NetworkConfig(baseUrl: "https://openwhyd.org/"))
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testWithMusicResponse()  async {
+        let result = await networkManager.send(path: MockPath.music, method: .GET , type: [MusicResponse].self)
+        
+        switch result {
+        case .success(let response):
+            XCTAssertNotNil(response)
+        case .failure(let error):
+            XCTFail(error.localizedDescription)
         }
     }
+  
+}
 
+struct MusicResponse: Decodable
+{
+    let uNm: String
+    let name: String
+}
+
+enum MockPath: String, NetworkPathProtocol {
+    case music = "adrien?format=json"
+    var value: String { return rawValue }
+    
 }
