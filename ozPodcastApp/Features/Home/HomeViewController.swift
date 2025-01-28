@@ -9,17 +9,16 @@
 import UIKit
 
 final class HomeViewController: UIViewController, NavigationView {
-    
-    // MARK: - Properties
-    var presenter: ViewToPresenterHomeProtocol!
-
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view = HomeView(self)
         view.backgroundColor = .white
     }
-     
+    
+    // MARK: - Properties
+    var presenter: ViewToPresenterHomeProtocol!
+    
 }
 
 extension HomeViewController: PresenterToViewHomeProtocol{

@@ -34,6 +34,12 @@ final class HomeView: BaseView<HomeViewController> {
             make.leading.equalToSuperview().offset(20)
         }
     }
-
+    
+    /*
+    private func changeColorIndactor() {
+        runOnMain {
+            self.loadingIndicator.color = .red
+        }
+    */
 }
 
