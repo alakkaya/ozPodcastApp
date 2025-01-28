@@ -177,6 +177,7 @@
 				41FB586F2D44F85100BC8E72 /* Frameworks */,
 				41FB58702D44F85100BC8E72 /* Resources */,
 				41D849F32D46BF67004BA9A0 /* Embed Frameworks */,
+				414FEDDA2D48DF16004CE402 /* SwiftLint Completer */,
 			);
 			buildRules = (
 			);
@@ -278,6 +279,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "SWIFT_PACKAGE_DIR=\"${BUILD_DIR%Build/*}SourcePackages/artifacts\"\nSWIFTLINT_CMD=$(ls \"$SWIFT_PACKAGE_DIR\"/swiftlintplugins/SwiftLintBinary/SwiftLintBinary.artifactbundle/swiftlint-*-macos/bin/swiftlint | head -n 1)\n\nif test -f \"$SWIFTLINT_CMD\" 2>&1; then\n    \"$SWIFTLINT_CMD\"\nelse\n    echo \"warning: \\`swiftlint\\` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+		414FEDDA2D48DF16004CE402 /* SwiftLint Completer */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Completer";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n    swiftlint autocorrect\n    swiftlint\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

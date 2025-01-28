@@ -1,0 +1,11 @@
+included:
+  - OzPodcastApp
+
+opt_in_rules:
+  - trailing_whitespace
+
+disabled_rules:
+  - trailing_newline
+
+excluded:
+  - Pods
